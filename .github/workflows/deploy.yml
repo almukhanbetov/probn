@@ -1,4 +1,4 @@
-name: Build & Deploy Gin
+name: Build & Deploy PROBN
 on:
   push:
     branches: [ "main" ]
@@ -17,7 +17,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           push: true
-          tags: compnet/gin-hello:latest
+          tags: almuko/probn:latest
   deploy:
     needs: build
     runs-on: ubuntu-latest
